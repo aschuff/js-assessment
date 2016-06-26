@@ -62,24 +62,43 @@ exports.arraysAnswers = {
   },
 
   count: function(arr, item) {
-
-    return arr;
+    let count = 0;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === item) {
+        count++
+      }
+    }
+    return count;
   },
 
   duplicates: function(arr) {
-
-    return arr;
+    let exist = [];
+    let doubles = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (exist.indexOf(arr[i]) === -1) {
+        exist.push(arr[i]);
+      }else if (doubles.indexOf(arr[i]) === -1) {
+        doubles.push(arr[i]);
+      }
+    }
+    return doubles;
   },
 
   square: function(arr) {
+    let newArr = []
     for (var i = 0; i < arr.length; i++) {
-      Math.pow(arr[i], arr[i]);
+      newArr.push(Math.pow(arr[i], 2));
     }
-    return arr;
+    return newArr;
   },
 
   findAllOccurrences: function(arr, target) {
-
-    return arr;
+    let newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === target) {
+        newArr.push(i)
+      }
+    }
+    return newArr;
   }
 };

@@ -14,6 +14,7 @@ exports.numbersAnswers = {
   },
 
   multiply: function(a, b) {
-  
+    var precise = (a*10)*(b*10)/100;
+    return precise;
   }
 };
